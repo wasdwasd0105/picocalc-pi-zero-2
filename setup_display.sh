@@ -41,11 +41,10 @@ apt install -y cmake git build-essential nano
 
 # Configure fbcp-ili9341
 echo "Downloading and configuring fbcp-ili9341..."
-cd ~
-if [ ! -d "fbcp-ili9341" ]; then
+if [ ! -d "fbcp-ili9341-picocalc" ]; then
     git clone https://github.com/wasdwasd0105/fbcp-ili9341-picocalc.git
 fi
-cd fbcp-ili9341
+cd fbcp-ili9341-picocalc
 mkdir -p build
 cd build
 rm -rf *
