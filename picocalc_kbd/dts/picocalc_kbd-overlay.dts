@@ -1,0 +1,19 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "brcm,bcm2835";
+
+    fragment@0 {
+        target = <&i2c1>;  // Use hardware I2C-1 (SDA=GPIO2, SCL=GPIO3)
+        __overlay__ {
+            #address-cells = <1>;
+            #size-cells = <0>;
+
+            picocalckbd@1f {
+                compatible = "picocalc_kbd";
+                reg = <0x1f>;
+            };
+        };
+    };
+};
