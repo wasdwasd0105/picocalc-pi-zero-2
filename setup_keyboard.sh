@@ -16,7 +16,7 @@ sudo apt install -y \
     git
 
 echo "🔧 Step 2: Building kernel module in ${SRC_DIR}..."
-make -C ${SRC_DIR}
+make -C /lib/modules/$(uname -r)/build M=$(realpath ${SRC_DIR}) modules
 
 echo "📁 Step 3: Installing kernel module to system..."
 sudo mkdir -p /lib/modules/$(uname -r)/extra
@@ -28,8 +28,14 @@ sudo cp ${DTBO_DIR}/${DTBO_FILE} /boot/overlays/
 
 echo "📝 Step 5: Updating /boot/config.txt..."
 CONFIG=/boot/config.txt
-grep -q "^dtoverlay=${MODULE_NAME}" $CONFIG || echo "dtoverlay=${MODULE_NAME}" | sudo tee -a $CONFIG
-grep -q "^dtparam=i2c_arm=on" $CONFIG || echo "dtparam=i2c_arm=on" | sudo tee -a $CONFIG
+
+grep -q "^dtoverlay=${MODULE_NAME}" $CONFIG || {
+    sudo sed -i "1i dtoverlay=${MODULE_NAME}" $CONFIG
+}
+
+grep -q "^dtparam=i2c_arm=on" $CONFIG || {
+    sudo sed -i "1i dtparam=i2c_arm=on" $CONFIG
+}
 
 echo "✅ Installation complete."
 echo "🔁 Reboot now to activate the driver:"
