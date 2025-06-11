@@ -103,13 +103,12 @@ if grep -q "^max_framebuffers=2" "$CONFIG_FILE"; then
     sed -i "s|^max_framebuffers=2|#max_framebuffers=2 (line commented for TFT ILI9488 installation on $(date +%m/%d/%Y))|" "$CONFIG_FILE"
 fi
 
-# Comment the line max_framebuffers=2 if it exists
-if grep -q "^[pi4]" "$CONFIG_FILE"; then
-    sed -i "s|^[pi4]|#[pi4] (line commented for TFT ILI9488 installation on $(date +%m/%d/%Y))|" "$CONFIG_FILE"
-fi
 
 # Comment the dtoverlay=vc4-kms-v3d line
 sed -i "s|^dtoverlay=vc4-kms-v3d|#dtoverlay=vc4-kms-v3d (line commented for TFT ILI9488 installation on $(date +%m/%d/%Y))|" "$CONFIG_FILE"
+
+sudo sed -i '/^\[pi4\]/s/^/#/' "$CONFIG_FILE"
+
 
 # Add required configuration lines
 echo "#Modifications for ILI9488 installation implemented by the script on $(date +%m/%d/%Y)" >> "$CONFIG_FILE"
