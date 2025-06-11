@@ -39,13 +39,13 @@ Please make sure your OS is Legacy 32-bit Bullseye Raspberry Pi OS.
 sudo apt update
 sudo apt install -y git
 git clone https://github.com/wasdwasd0105/picocalc-pi-zero-2.git
-cd ./picocalc-pi-zero-2
 ```
 
 
 #### Install Display driver FIRST
 
 ```bash
+cd ./picocalc-pi-zero-2
 chmod +x ./setup_display.sh
 sudo ./setup_display.sh
 ```
@@ -54,6 +54,7 @@ Wait for some time, it will reboot after installed
 #### Install Keyborad driver
 
 ```bash
+cd ./picocalc-pi-zero-2
 chmod +x ./setup_keyboard.sh
 sudo ./setup_keyboard.sh
 ```
