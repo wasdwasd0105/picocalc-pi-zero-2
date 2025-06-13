@@ -1,5 +1,9 @@
 ## Guide for Setup Pi Zero 2 on Picocalc
 
+#### Tips
+1. You can change UI size on Preference → Appearance Settings → Defaults
+2. The Pico Connectors on clockwork_Mainboard_V2.0_Schematic are Left-Right flipped!
+
 #### Set up wire connection 
 
 Connect your PicoCalc to the Raspberry Pi Zero 2:
@@ -71,3 +75,5 @@ dtoverlay=audremap,pins_12_13
 ```
 
 Please reboot after installed
+
+
