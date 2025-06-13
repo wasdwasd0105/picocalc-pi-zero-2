@@ -25,7 +25,7 @@ Connect your PicoCalc to the Raspberry Pi Zero 2:
 <img src="pinconnection.png" alt="Pinout Connections illustrated" height="400">
 
 
-Connector Schematic on clockwork_Mainboard_V2.0_Schematic. Please note it is Left-Right mirrored!
+Connector Schematic on clockwork_Mainboard_V2.0_Schematic. Please note it is Left-Right flipped!
 
 <img src="connector.png" alt="Pinout Connections illustrated" height="400">
 
