@@ -61,5 +61,8 @@ dtparam=audio=on
 dtoverlay=audremap,pins_12_13
 ```
 **Please reboot after installed**
-
+And then change audio output device from `hdmi` to `headphones`
+```bash
+sudo raspi-config nonint do_audio 1
+```
 5. After that, you are ready to use your PicoCalc with Raspberry Pi Zero. **Enjoy!**
