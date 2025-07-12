@@ -55,7 +55,7 @@ sudo ./setups/setup_keyboard.sh
 **Please reboot after installed**    
 
 4. Install Audio
-Edit /boot/config.txt (with sudo) and add:
+Edit `/boot/config.txt` (with sudo) and add:
 ```bash
 dtparam=audio=on
 dtoverlay=audremap,pins_12_13
