@@ -37,6 +37,6 @@ grep -q "^dtparam=i2c_arm=on" $CONFIG || {
     sudo sed -i "1i dtparam=i2c_arm=on" $CONFIG
 }
 
-echo "✅ Installation complete."
-echo "🔁 Reboot now to activate the driver:"
-echo "    sudo reboot"
+echo "Installation complete."
+echo "\nSetup complete. The Raspberry Pi will now reboot."
+sudo reboot
