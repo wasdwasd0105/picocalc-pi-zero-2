@@ -10,17 +10,17 @@ Connect your PicoCalc to the Raspberry Pi Zero 2:
 
 | **Pin Name** |**Raspberry Pi Pico/PicoCalc** | **Raspberry Pi Zero 2** |
 |-------------|----------------------|----------------|
-| **VDD**     | 5V                   | Pin 2 or Pin 4 |
-| **GND**     | Ground               | Pin 6          |
-| **LCD_DC**  | GPIO 24              | Pin 18         |
-| **LCD_RST** | GPIO 25              | Pin 22         |
-| **SPI1_CS** | GPIO 8               | Pin 24         |
-| **SPI1_TX** | GPIO 10              | Pin 19         |
-| **SPI1_SCK**| GPIO 11              | Pin 23         |
-| **I2C1_SDA**| GPIO 2               | Pin 3          |
-| **I2C1_SCL**| GPIO 3               | Pin 5          |
-| **PWM_R**   | GPIO 13              | Pin 33         |
-| **PWM_L**   | GPIO 12              | Pin 32         |
+| **VDD**     | VSYS - GP39          | Pin 2 or Pin 4 |
+| **GND**     | GND - GP38           | Pin 6          |
+| **LCD_DC**  | GP14                 | Pin 18         |
+| **LCD_RST** | GP15                 | Pin 22         |
+| **SPI1_CS** | GP13                 | Pin 24         |
+| **SPI1_TX** | GP11                 | Pin 19         |
+| **SPI1_SCK**| GP10                 | Pin 23         |
+| **I2C1_SDA**| GPI6                 | Pin 3          |
+| **I2C1_SCL**| GPI7                 | Pin 5          |
+| **PWM_R**   | GP27                 | Pin 33         |
+| **PWM_L**   | GP26                 | Pin 32         |
 
 <img src="pinconnection.png" alt="Pinout Connections illustrated" height="400">
 
@@ -53,7 +53,7 @@ cd ./picocalc-pi-zero-2
 chmod +x ./setup_display.sh
 sudo ./setup_display.sh
 ```
-Wait for some time, it will reboot after installed
+Wait for some time, it will reboot after installed7
 
 #### Install Keyborad driver
 
