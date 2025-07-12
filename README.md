@@ -52,7 +52,7 @@ cd ./picocalc-pi-zero-2
 chmod +x ./setups/setup_keyboard.sh
 sudo ./setups/setup_keyboard.sh
 ```
-**Please reboot after installed**    
+*Wait for some time, it will reboot after installed*     
 
 4. Install Audio
 Edit `/boot/config.txt` (with sudo) and add:
