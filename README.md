@@ -8,7 +8,7 @@
 
 Connect your PicoCalc to the Raspberry Pi Zero 2:
 
-| **Picocalc Pin** |**Raspberry Pi Pin** | **Pi Pin Number** |
+| **Pin Name** |**Raspberry Pi Pico/PicoCalc** | **Raspberry Pi Zero 2** |
 |-------------|----------------------|----------------|
 | **VDD**     | 5V                   | Pin 2 or Pin 4 |
 | **GND**     | Ground               | Pin 6          |
