@@ -41,7 +41,7 @@ git clone https://github.com/wasdwasd0105/picocalc-pi-zero-2.git
 2. Install Display driver **FIRST**   
 ```bash
 cd ./picocalc-pi-zero-2
-chmod +x ./setup_display.sh
+chmod +x ./setups/setup_display.sh
 sudo ./setups/setup_display.sh
 ```
 *Wait for some time, it will reboot after installed*   
@@ -49,7 +49,7 @@ sudo ./setups/setup_display.sh
 3. Install Keyborad driver
 ```bash
 cd ./picocalc-pi-zero-2
-chmod +x ./setup_keyboard.sh
+chmod +x ./setups/setup_keyboard.sh
 sudo ./setups/setup_keyboard.sh
 ```
 **Please reboot after installed**    
